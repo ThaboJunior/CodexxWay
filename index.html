@@ -71,7 +71,7 @@
                 
             </div>
             <div>
-                <i class="fa-solid fa-crop"></i>
+                <i class="fa-solid fa-heart"></i>
                 <h2>Logo Design</h2>
                 <p>Unique and memorable logo designs that define your brand identity.
                      We craft professional logos that reflect your vision, values,
@@ -115,118 +115,97 @@
         </div>
     </div>
  </div>
- <!-- -----------------Portfolio----------------- -->
-  <div id="portfolio">
-      <div class="container">
-         <h1 class="sub-title">My Work</h1>
+<!-- -----------------Portfolio----------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
 
-         <!-- ---------Posters Section------------ -->
-
-         <br></br>
-         <h3 style="text-align: center;"> Posters</h3>
-         <div class="work-list">
-            <div class="work">
-                <img src="images/Poster.jpg">
-                
-            </div>
-            <div class="work">
-                <img src="images/Poster.jpg">
-                
-            </div>
-            <div class="work">
-                <img src="images/Poster.jpg">
-                
-            </div>
-         </div>
-      </div>
-
-
-      <!-- ---------Logos Section------------ -->
-
-      <div class="container">
-        
-       <h3 style="text-align: center;"> Logos</h3>
+        <!-- ---------Posters Section------------ -->
+        <br></br>
+        <h3 style="text-align: center;"> Posters</h3>
         <div class="work-list">
-           <div class="work">
-               <img src="images/Logo.jpg">
-               
-           </div>
-           <div class="work">
-               <img src="images/Logo.jpg">
-               
-           </div>
-           <div class="work">
-               <img src="images/Logo.jpg">
-               
-           </div>
+            <div class="work">
+                <span class="clickable"><img src="images/Poster.jpg" alt="Poster"></span>
+            </div>
+            <div class="work">
+                <span class="clickable"><img src="images/Poster.jpg" alt="Poster"></span>
+            </div>
+            <div class="work">
+                <span class="clickable"><img src="images/Poster.jpg" alt="Poster"></span>
+            </div>
         </div>
-     </div>
+    </div>
 
-     <!-- ---------Tickets Section------------ -->
+    <!-- ---------Logos Section------------ -->
+    <div class="container">
+        <h3 style="text-align: center;"> Logos</h3>
+        <div class="work-list">
+            <div class="work">
+                <span class="clickable"><img src="images/Logo.jpg" alt="Logo"></span>
+            </div>
+            <div class="work">
+                <span class="clickable"><img src="images/Logo.jpg" alt="Logo"></span>
+            </div>
+            <div class="work">
+                <span class="clickable"><img src="images/Logo.jpg" alt="Logo"></span>
+            </div>
+        </div>
+    </div>
 
-     <div class="container">
-        
+    <!-- ---------Tickets Section------------ -->
+    <div class="container">
         <h3 style="text-align: center;"> Tickets</h3>
-         <div class="work-list">
+        <div class="work-list">
             <div class="work">
-                <img src="images/Ticket.jpg">
-                
+                <span class="clickable"><img src="images/Ticket.jpg" alt="Ticket"></span>
             </div>
             <div class="work">
-                <img src="images/Ticket.jpg">
-                
+                <span class="clickable"><img src="images/Ticket.jpg" alt="Ticket"></span>
             </div>
             <div class="work">
-                <img src="images/Ticket.jpg">
-                
+                <span class="clickable"><img src="images/Ticket.jpg" alt="Ticket"></span>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-
-      <!-- ---------Gig Guide Section------------ -->
-
-      <div class="container">
-        
+    <!-- ---------Gig Guide Section------------ -->
+    <div class="container">
         <h3 style="text-align: center;"> Gig Guides</h3>
-         <div class="work-list">
+        <div class="work-list">
             <div class="work">
-                <img src="images/Gig Guides.jpg">
-                
+                <span class="clickable"><img src="images/Gig Guides.jpg" alt="Gig Guide"></span>
             </div>
             <div class="work">
-                <img src="images/Gig Guides.jpg">
-                
+                <span class="clickable"><img src="images/Gig Guides.jpg" alt="Gig Guide"></span>
             </div>
             <div class="work">
-                <img src="images/Gig Guides.jpg">
-                
+                <span class="clickable"><img src="images/Gig Guides.jpg" alt="Gig Guide"></span>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-      <!-- ---------Song Covers Section------------ -->
-
-      <div class="container">
-        
+    <!-- ---------Song Covers Section------------ -->
+    <div class="container">
         <h3 style="text-align: center;"> Song Covers</h3>
-         <div class="work-list">
+        <div class="work-list">
             <div class="work">
-                <img src="images/Song Cover.jpg">
-                
+                <span class="clickable"><img src="images/Song Cover.jpg" alt="Song Cover"></span>
             </div>
             <div class="work">
-                <img src="images/Song Cover.jpg">
-                
+                <span class="clickable"><img src="images/Song Cover.jpg" alt="Song Cover"></span>
             </div>
             <div class="work">
-                <img src="images/Song Cover.jpg">
-                
+                <span class="clickable"><img src="images/Song Cover.jpg" alt="Song Cover"></span>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
+</div>
 
-  </div>
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
 
  <!-- -----------------Contact----------------- -->
 <div id="contact">
@@ -257,6 +236,31 @@
     </div>
 </div>
 
+<!-- JavaScript for Image Click Functionality -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("fullImage");
+        var closeBtn = document.querySelector(".close");
+
+        document.querySelectorAll(".clickable img").forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
 
 <script>
 
