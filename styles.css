@@ -68,7 +68,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #4a67c0;
+    color: #fff;
 }
 /* -----------------about us-------------------*/
 #about{
@@ -353,7 +353,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/bg4.jpg);
+        background-image: url(images/bg6.jpg);
     }   
     .header-text{
         margin-top: 100%;
